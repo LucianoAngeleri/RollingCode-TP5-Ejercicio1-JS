@@ -26,23 +26,32 @@
   </header>
   <main>
     <section class="container">
-      <h2 class="display-2">Ejercicio N°1 - Números Mágicos</h2>
-      <h3 class="display-3">Enunciado</h3>
-      <p class="fs-3">Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar, la interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
-        Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero.        
-      </p>
+      <h2 class="display-2">Ejercicio N°1</h2>
+      <div class="text-center d-flex flex-column">
+        <h3 class="display-3 ">Números Mágicos</h3>
+        <a class="btn btn-outline-primary" data-bs-toggle="collapse" href="#btnMostrarEnunciado" role="button" aria-expanded="false" aria-controls="btnMostrarEnunciado">
+          Mostrar enunciado
+        </a>
+      </div>
+      <div class="my-3" id="btnMostrarEnunciado">
+        <h4 class="display-5">Enunciado</h4>
+        <p class="lead">Crea una web con bootstrap y js, que contenga un botón comenzar el juego, en ese momento se crea un número aleatorio que el usuario deberá adivinar, la interfaz del usuario debe tener además un input para ingresar un número y un botón enviar, al presionar el botón enviar mostrar en un alert si el usuario adivino o no el número mágico, si no lo adivino indicarle con un alert si el numero que ingreso es mayor o menor al número mágico.
+          Cuando el usuario adivine el numero mostrar un mensaje indicando al usuario que adivino el numero.        
+        </p>
+      </div>
     </section>
-    <section class="container mt-5">
-      <p class="text-center">
+    <section class="container">
+      <div class="text-center d-flex flex-column">
+        <p class="text-center"> Presione el botón para iniciar el juego y generar un número aleatorio</p>
         <button class="btn btn-success fs-3" type="button" id="btnInicio">Comenzar Juego</button>
-      </p>
-      <form class="text-center row g-3">
+      </div>
+      <form class="text-center row g-3 py-3">
         <div class="col-10 row">
           <label class="form-label col-3" for="inputNumero">Ingrese un número</label>
           <input class="form-control col" type="number" name="inputNumero">
         </div>
         <div class="col">
-        <button class="btn btn-primary" type="submit">Aceptar</button>
+        <button class="btn btn-primary" type="submit">Enviar</button>
         </div>
         
       </form>
