@@ -47,7 +47,10 @@
             <div class="alert alert-success" role="alert" id="alertResultado"></div>
           </div>
           <form class="text-center d-flex flex-column gap-3">
-            <input class="form-control form-control-lg" type="number" id="inputNumero" placeholder="Ingresa un número del 1 al 10" required maxlength="2" minlength="1" min="1" max="10">
+            <div class="input-group">
+              <input class="form-control py-3" type="number" id="inputNumero" placeholder="Ingresa un número" required maxlength="2" minlength="1" min="1" max="10">
+              <div class="input-group-text">1 a 10</div>
+            </div>
             <button class="btn btn-primary btn-lg m-auto" type="submit">Enviar</button>
           </form>
         </div>
