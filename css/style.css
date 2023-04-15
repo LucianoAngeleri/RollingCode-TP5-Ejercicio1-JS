@@ -2,6 +2,17 @@
 *{
     font-family: 'Golos Text', sans-serif;
 }
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex-grow: 1;
+}
 h1{
     text-shadow: 0 0 5rem rgba(0, 0, 0, 0.204);
+}
+footer{
+    box-shadow: 0 -3rem 2rem rgba(0, 0, 0, 0.1);
 }

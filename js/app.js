@@ -44,7 +44,7 @@ function verResultado(e) {
     if (condicion === true) {
         formulario.className = "d-none"
         btnInicio.className = "d-block"
-        btnInicio.className = "btn btn-outline-success tn-lg rounded-pill p-4 w-75 align-self-center fs-3"
+        btnInicio.className = "btn btn-outline-success tn-lg rounded-pill p-4 w-auto align-self-center fs-3"
         btnInicio.innerHTML = "Volver a jugar"
     }
     formulario.reset();
