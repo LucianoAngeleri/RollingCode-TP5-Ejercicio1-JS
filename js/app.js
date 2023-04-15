@@ -14,41 +14,39 @@ function generarNumero() {
 function inicioJuego() {
     numeroGenerado = generarNumero()
     console.log(numeroGenerado)
+    contenedorAlertResultado.className = "d-none"
     contenedorJuego.className = "d-block"
+    formulario.className = "text-center d-flex flex-column gap-3"
     btnInicio.className = "d-none"
-    // btnInicio.className = "btn btn-danger fs-3"
-    // btnInicio.innerHTML = "Volver a comenzar"
 }
 function verResultado(e) {
     e.preventDefault();
     let inputNumero = document.getElementById("inputNumero")
     let contenedorAlertResultado = document.getElementById("contenedorAlertResultado")
     let alertResultado = document.getElementById("alertResultado")
-    console.log(alertResultado)
-    let condicion = true;
+    condicion = false;
     if (inputNumero.value == numeroGenerado) {
-        contenedorAlertResultado.className = "container visible"
+        contenedorAlertResultado.className = "d-block"
         alertResultado.className = "alert alert-success"
         alertResultado.innerHTML = "Elegiste el número correcto!"
-        condicion = true
+        condicion = true; 
     } else if (inputNumero.value > numeroGenerado) {
         contenedorAlertResultado.className = "container visible"
         alertResultado.className = "alert alert-secondary"
         alertResultado.innerHTML = "El número ingresado es mayor, <strong>elige un número mas bajo</strong>"
-        condicion = false
+        condicion = false;
     } else {
         contenedorAlertResultado.className = "container visible"
         alertResultado.className = "alert alert-secondary"
         alertResultado.innerHTML = "El número ingresado es menor, <strong>elige un número mas alto</strong>"
-        condicion = false
+        condicion = false;
     }
     if (condicion === true) {
-        contenedorJuego.className = "d-none"
+        formulario.className = "d-none"
         btnInicio.className = "d-block"
         btnInicio.className = "btn btn-danger fs-3"
         btnInicio.innerHTML = "Volver a jugar"
     }
     formulario.reset();
-
 }
 
